@@ -8,4 +8,4 @@
 
 ![Hollow knight](https://tinyurl.com/yshvj25b)
 
-[Files in Drive - ADSO] (https://tinyurl.com/4yvz4yw7)
+[Files in Drive - ADSO](https://tinyurl.com/4yvz4yw7)
