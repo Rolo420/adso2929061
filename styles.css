@@ -101,6 +101,20 @@ body {
                 width: 200px;
             }
         }
+        menu{
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            a:is(:link, :visited){
+                color: red;
+                background: yellow;
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
 }
 
