@@ -1,0 +1,26 @@
+div.adso{
+    background-color: #fff6;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    height: 200px;
+    margin-inline: auto;
+    width: 200px;
+}
+
+div.adso:hover {
+    animation: anim 0.5s ease-in infinite;
+}
+
+@keyframes anim {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
