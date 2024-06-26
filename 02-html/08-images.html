@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01- Document html 5</title>
+    <title>08 - Images</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        section {
+            img {
+                border-radius: 10px;
+                border: 4px solid #fff6;
+                object-fit: cover;
+                display: flex;
+                width: 260px;
+                margin-inline: auto;
+            }
+        }
+    </style>
 </head>
 <body class="html">
     <nav>
@@ -14,12 +26,14 @@
     </nav>
     <main>
         <header>
-            <h1>01- Doc html 5</h1>
-            <h2>Basic structure of document HTML 5</h2>
+            <h1>08 - Images</h1>
+            <h2>This tag allows you to insert a image</h2>
         </header>
         <section>
-            <h3>This is a title:</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ullam, deserunt fugit accusantium atque illo explicabo rerum voluptas, nobis quidem ducimus cupiditate quo officia. Nesciunt ad possimus quo hic corrupti.</p>
+            <h3>Relative Path:</h3>
+            <img src="images/toallin.jpg" alt="toallin">
+            <h3>Absolute Path:</h3>
+            <img src="https://lh3.googleusercontent.com/proxy/d7yurvVBxkfc-ugb0QPDi8LU78sQYXkRUKUGA8MW8hP1u8_XT-dLpfBEt-8uWxT4tOeAzBcokbGb8VFwVKNPug-HFii-j-OQVScXGipSAzttEnI_PqEMPwnmitv3lGj2MESGnjtvqg" alt="otto">
         </section>
     </main>
 </body>
