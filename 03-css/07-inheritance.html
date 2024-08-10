@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>05 - Advanced Selectors</title>
+    <title>07 - Inheritanceate</title>
     <link rel="stylesheet" href="../css/styles.css">
     <style>
-        section {
-            padding-block: 4rem !important;
+        ul, ol {
+            padding-left: 2rem;
         }
-        section > p {
-            text-align: center;
-            font-size: 1.4rem !important;
+        ul {
+            color: lightskyblue;
         }
-        section[class] > p + p {
-            background: linear-gradient(to left,white,navy);
-            color: navy !important;
-            padding: 1rem;
+        ul ol li.not {
+            color: crimson;
         }
     </style>
 </head>
@@ -28,16 +25,22 @@
     </nav>
     <main>
         <header>
-            <h1>05 - Advanced Selectors</h1>
-            <ul>
-                <li>Children (>)</li>
-                <li>Adjacent/Sibling (+)</li>
-                <li>Attribute [class]</li>
-            </ul>
+            <h1>07 - Inheritance</h1>
+            <h2>Property is inherited from the father to all his descendants.</h2>
         </header>
-        <section class="example">
-           <p>CPIC</p>
-            <p>Regional Caldas</p>
+        <section>
+           <ul>
+                <li>Resident Evil</li>
+                <li>Def Jam</li>
+                <li>Assasins credds</li>
+                <li>Fifa
+                    <ol>
+                        <li>Vice City</li>
+                        <li>San Andreas</li>
+                        <li>Chinatown</li>
+                    </ol>
+                </li>
+            </ul>
         </section>
     </main>
 </body>
