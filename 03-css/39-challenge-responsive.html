@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39 - Challenge Responsive</title>
+    
+    <style>
+        header {
+            text-align: center;
+            color: #fff;
+        }
+        header div img {
+            width: 300px;
+            height: 200px;
+            object-position: center;
+        }
+
+        header div h4 {
+            text-align: center;
+            color: black;
+            font-size: x-large;
+            font-weight: bold;
+            background-color: #fff9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 60px;
+        }
+
+        header div h4:hover {
+            background-color: rgba(67, 228, 18, 0.808);
+        }
+        nav {
+            width: 30px;
+            height: 30px;
+        }
+        * {
+          transition: all 0.2s ease-in;
+        }
+
+        body {
+          background: url(/images/fondo.png);
+          font-family: sans-serif;
+        }
+        
+        main {
+          background-color: #ccc;
+          display: flex;
+          gap: 1rem;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          width: 850px;
+          margin: 2rem auto;
+          padding: 1rem;
+        }
+        
+        main div.toallin {
+          background: url(/images/toallin.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 200px;
+          width: 200px;
+        }
+
+        main div.stan {
+          background: url(/images/stan.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 200px;
+          width: 200px;
+        }
+
+        main div.cartman {
+          background: url(/images/cartman.webp);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 200px;
+          width: 200px;
+        }
+
+        main div.kyle {
+          background: url(/images/kyle.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          height: 200px;
+          width: 200px;
+        }
+
+        main div h4 {
+            text-align: center;
+            color: black;
+            font-size: x-large;
+            font-weight: bold;
+            background-color: #fff9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 40px;
+            position: absolute;
+            bottom: 20px;
+        }
+        
+        main div img {
+          object-fit: cover;
+          width: 200px;
+          height: 200px;
+        }
+
+        article {
+          background-color: #ccc;
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          align-items: center;
+          width: 850px;
+          margin: 2rem auto;
+          padding: 1rem;
+        }
+
+        article div img {
+            width: 200px;
+            height: 200px;
+        }
+        
+        @media (max-width: 860px) {
+          main {
+            width: 500px;
+          }
+          article {
+            width: 500px;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          main {
+            width: 400px;
+          }
+          article {
+            flex-direction: column;
+            width: 400px;
+          }
+        }
+        </style>
+</head>
+<body class="css">
+    <nav>
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </a>
+    </nav>
+    <header>
+        <h1>39 - Challenge Responsive</h1>
+        <div class="titulo">
+            <img src="/images/south park letrero.png">
+        </div>
+    </header>
+    <main>
+        <div class="toallin">
+        <h4>Toallin</h4>
+        </div>
+        <div class="stan">
+          <h4>Stan</h4>
+        </div>
+        <div class="cartman">
+          <h4>Cartman</h4>
+        </div>
+        <div class="kyle">
+          <h4>Kyle</h4>
+        </div>
+    </main>
+      <article>
+        <div class="img">
+          <img src="/images/toallin.png" alt="">
+        </div>
+        <div class="txt">
+          <h2>Toallin</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fugit sint, corporis ad accusamus delectus officiis vel placeat ratione esse, error minus rerum. Culpa asperiores consequuntur est tempora minima aperiam.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fugit sint, corporis ad accusamus delectus officiis vel placeat ratione esse, error minus rerum. Culpa asperiores consequuntur est tempora minima aperiam.</p>
+        </div>
+      </article>
+      <article>
+        <div class="img">
+          <img src="/images/stan.png" alt="">
+        </div>
+        <div class="txt">
+          <h2>Stan</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fugit sint, corporis ad accusamus delectus officiis vel placeat ratione esse, error minus rerum. Culpa asperiores consequuntur est tempora minima aperiam.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fugit sint, corporis ad accusamus delectus officiis vel placeat ratione esse, error minus rerum. Culpa asperiores consequuntur est tempora minima aperiam.</p>
+        </div>
+      </article>
+      <article>
+        <div class="img">
+          <img src="/images/cartman.webp" alt="">
+        </div>
+        <div class="txt">
+          <h2>Cartman</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fugit sint, corporis ad accusamus delectus officiis vel placeat ratione esse, error minus rerum. Culpa asperiores consequuntur est tempora minima aperiam.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fugit sint, corporis ad accusamus delectus officiis vel placeat ratione esse, error minus rerum. Culpa asperiores consequuntur est tempora minima aperiam.</p>
+        </div>
+      </article>
+      <article>
+        <div class="img">
+          <img src="/images/kyle.png" alt="">
+        </div>
+        <div class="txt">
+          <h2>Kyle</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fugit sint, corporis ad accusamus delectus officiis vel placeat ratione esse, error minus rerum. Culpa asperiores consequuntur est tempora minima aperiam.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut fugit sint, corporis ad accusamus delectus officiis vel placeat ratione esse, error minus rerum. Culpa asperiores consequuntur est tempora minima aperiam.</p>
+        </div>
+      </article>
+</body>
+</html>
