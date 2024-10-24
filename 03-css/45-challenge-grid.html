@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45 - Challenge grid</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh
+}
+div {
+  display: grid;
+  place-items: center;
+  /*
+  grid-template-columns: repeat(3, 140px);
+  grid-template-rows: repeat(3, 140px);
+  */
+  grid-template-areas: 
+      "img01 img02 img03"
+      "img04 img02 img05"
+      "img06 img06 img07";
+  margin: 2rem auto;
+  width: calc(140px * 3);
+  gap: 8px;
+}
+
+div.challenge {
+  display: grid;
+  place-items: center;
+  /*
+  grid-template-columns: repeat(4, 140px);
+  grid-template-rows: repeat(3, 140px);
+  */
+  grid-template-areas: 
+      "img08 img08 img09 img10"
+      "img08 img08 img11 img11"
+      "img12 img13 img11 img11";
+  margin: 2rem auto;
+  width: calc(140px * 4);
+  gap: 8px;
+}
+
+div.challenge img {
+  border-radius: 4px;
+  outline: solid #000;
+  object-fit: cover;
+  height: 140px;
+  width: 140px;
+}
+
+div.challenge img.img08 {
+  grid-area: img08;
+  height: calc(140px * 2 + 8px);
+  width: calc(140px * 2 + 8px);
+}
+div.challenge img.img09 {
+  grid-area: img09;
+}
+div.challenge img.img10 {
+  grid-area: img10;
+}
+div.challenge img.img11 {
+  grid-area: img11;
+  height: calc(140px * 2 + 8px);
+  width: calc(140px * 2 + 8px);
+}
+div.challenge img.img12 {
+  grid-area: img12;
+}
+div.challenge img.img13 {
+  grid-area: img13;
+}
+
+div img {
+  border-radius: 4px;
+  outline: solid #000;
+  object-fit: cover;
+  height: 140px;
+  width: 140px;
+}
+
+img.img01 {
+  grid-area: img01;
+}
+img.img02 {
+  grid-area: img02;
+  height: calc(140px * 2 + 8px);
+}
+img.img03 {
+  grid-area: img03;
+}
+img.img04 {
+  grid-area: img04;
+}
+img.img05 {
+  grid-area: img05;
+}
+img.img06 {
+  grid-area: img06;
+  width: calc(140px * 2 + 8px);
+}
+img.img07 {
+  grid-area: img07;
+}
+    </style>
+</head>
+<body class="css">
+    <nav>
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>45 - Challenge grid</h1>
+        </header>
+        <section>
+            <div>
+                <img src="/images/tegridad.jfif" class="img01">
+                <img src="/images/toallin columna 2.png" class="img02">
+                <img src="/images/slow burn.jfif" class="img03">
+                <img src="/images/slow burn2.jfif" class="img04">
+                <img src="/images/toallin fondo.png" class="img05">
+                <img src="/images/farm.jfif" class="img06">
+                <img src="/images/otto weed.jpeg" class="img07">
+              
+            </div>
+            <div class="challenge">
+                <img src="/images/otto.jfif" class="img08">
+                <img src="/images/toallin3.jfif" class="img09">
+                <img src="/images/logo-toallin.jfif" class="img10">
+                <img src="/images/homero y otto.jfif" class="img11">
+                <img src="/images/otto2.jpg" class="img12">
+                <img src="/images/bart.jfif" class="img13">
+            </div>
+    
+        </section>
+    </main>
+</body>
+</html>
