@@ -1,19 +1,20 @@
-div.adso{
+div.adso {
     background-color: #fff6;
     border-radius: 50%;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     font-size: 2rem;
+    text-align: center;
     height: 200px;
     margin-inline: auto;
     width: 200px;
 }
 
 div.adso:hover {
-    animation: anim 0.5s ease-in infinite;
+    cursor: pointer;
+    animation: 0.5s anim ease-in infinite;
 }
 
 @keyframes anim {
@@ -24,4 +25,3 @@ div.adso:hover {
         transform: scale(1.1);
     }
 }
-
