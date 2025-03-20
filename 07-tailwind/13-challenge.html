@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13- Layout (Challenge)</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+</head>
+<body class="bg-[#1e1e1e] font-[Poppins]">
+    <main class="min-h-[100dvh] flex flex-col justify-center  items-center">
+        <!-- Screen 01 - Welcome -->
+        <section id="welcome" class="welcome w-[380px] h-[720px] justify-center transition-all ease-in duration-500 translate-x-[-400%] target:translate-x-[0px] my-4 rounded-[20px] overflow-hidden bg-[url(images/bg-welcome.png)] bg-[white] absolute bg-top bg-no-repeat">
+            <div class="absolute rounded-[30px] bottom-1 translate-x-[10px] w-[360px] h-[396px] bg-white justify-center items-center">
+                    <figure class="logo h-[120px] w-[120px] mx-auto mt-[-60px] bg-[url(images/logo.png)] translate-x-[15px] bg-no-repeat">
+                    </figure>
+                    <h2 class="text-center text-[32px] font-[500] mt-[38px] text-[#444]">Welcome to</h2>
+                    <h2 class="text-center text-[32px] mt-[-10px] font-[600] text-[#58B953]">Tegrydad</h2>
+                    <p class="text-[#888] font-[400] text-[16px] mx-auto mt-[40px] w-[272px] text-center">
+                        Enjoy the wine that what you want when you want...
+                    </p>
+                    <div class="actions
+                                w-[320px]
+                                flex
+                                mt-[42px]
+                                mx-auto">
+                        <a href="#signin" class="w-[160px]
+                                          h-[55px]
+                                          flex
+                                          justify-center
+                                          items-center
+                                        text-white
+                                          rounded-s-[80px]
+                                        bg-[#58B953]">Sign In</a>
+                        <a href="#signup" class="w-[160px]
+                                          h-[55px]
+                                          flex
+                                          justify-center
+                                          items-center
+                                        text-[#58B953]
+                                          border-2
+                                          rounded-e-[80px]
+                                        bg-[#fff]">Sign Up</a>
+                    </div>
+
+            </div>
+        </section>
+        <!-- Screen 02 - Signin -->
+        <section id="signin" class="signin 
+                                    w-[386px] 
+                                    h-[720px]
+                                    transition-all
+                                    ease-in
+                                    duration-500
+                                    translate-x-[-300%]
+                                    target:translate-x-[0px]
+                                    my-4
+                                    rounded-[20px]
+                                    overflow-hidden
+                                  bg-[white]
+                                    bg-[url(images/top-wine.svg)]
+                                    absolute
+                                    bg-top
+                                    bg-no-repeat">
+            <figure class="logo
+                           h-[120px]
+                           w-[120px]
+                           mx-auto
+                           justify-center
+                           items-center
+                           mt-[60px]
+                           bg-[url(images/logo.png)]
+                           bg-no-repeat
+                           ">
+                        </figure>
+            <a href="#welcome"  class="absolute 
+                                       left-[20px]
+                                       hover:translate-x-[-6px]
+                                       transition-all
+                                       top-[20px]">
+              <img src="images/atras.png" alt="Back Welcome">
+            </a>
+            <h2 class="text-[40px]
+                       mt-max
+                       text-center
+                       text-[#58B953]
+                       font-[500]">LOGIN</h2>
+            <h3 class="text-[16px]
+                       text-center
+                     text-[#888]
+                       font-[400]">Enter your account to login</h3>
+            
+          <form action="#welcome" class="mt-10
+                                 flex 
+                                 justify-center
+                                 items-center
+                                 flex-col 
+                                 gap-2">
+            <label class="flex 
+                          gap-1 
+                        text-[#58B953]
+                          text-[16px]
+                          font-[500]
+                          items-center">
+              <img src="images/user.png" alt="Email">
+              Email:
+            </label>
+            <input class="border-[2px]
+                        border-[#58B953]
+                        text-[#888]
+                          outline-none
+                          indent-4
+                          h-[55px]
+                          w-[320px]
+                          rounded-[25px]" type="text" placeholder="toallin@gmail.com" required>
+            <label class="flex 
+                          gap-1 
+                        text-[#58B953]
+                          text-[16px]
+                          font-[500]
+                          items-center">
+              <img src="images/Key.png" alt="Password">
+              Password:
+            </label>
+            <input class="border-[2px]
+                        border-[#58B953]
+                        text-[#888]
+                          w-[320px]
+                          outline-none
+                          indent-4
+                          h-[55px]
+                          items-center
+                          rounded-[25px]" type="password" placeholder="***********" required>
+            <button class="w-[320px]
+                           mt-[10px]
+                           cursor-pointer
+                           transition-all
+                           hover:scale-[1.05]
+                         text-white
+                           rounded-[25px]
+                           text-[16px]
+                           font-[500]
+                           h-[55px]
+                         bg-[#58B953]">
+              Sign In
+            </button>
+          </form>
+
+        </section>
+
+        <!-- Screen 03 - Signup -->
+        <section id="signup" class="signup 
+                                    w-[386px] 
+                                    h-[720px]
+                                    transition-all
+                                    ease-in
+                                    duration-500
+                                    translate-x-[-300%]
+                                    target:translate-x-[0px]
+                                    my-4
+                                    rounded-[20px]
+                                    overflow-hidden
+                                  bg-[white]
+                                    bg-[url(images/top-wine.svg)]
+                                    absolute
+                                    bg-top
+                                    bg-no-repeat">
+            <figure class="logo
+                           h-[120px]
+                           w-[120px]
+                           mx-auto
+                           justify-center
+                           items-center
+                           mt-[60px]
+                           bg-[url(images/logo.png)]
+                           bg-no-repeat
+                           ">
+                        </figure>
+            <a href="#welcome"  class="absolute 
+                                       left-[20px]
+                                       hover:translate-x-[-6px]
+                                       transition-all
+                                       top-[20px]">
+              <img src="images/atras.png" alt="Back Welcome">
+            </a>
+            <h2 class="text-[40px]
+                       mt-max
+                       text-center
+                       text-[#58B953]
+                       font-[500]">SIGN UP</h2>
+            <h3 class="text-[16px]
+                       text-center
+                     text-[#888]
+                       font-[400]">Create your account</h3>
+            
+          <form action="#welcome" class="mt-10
+                                 flex 
+                                 justify-center
+                                 items-center
+                                 flex-col 
+                                 gap-2">
+            <label class="flex 
+                          gap-1 
+                        text-[#58B953]
+                          text-[16px]
+                          font-[500]
+                          items-center">
+              <img src="images/user.png" alt="Email">
+              Email:
+            </label>
+            <input class="border-[2px]
+                        border-[#58B953]
+                        text-[#888]
+                          outline-none
+                          indent-4
+                          h-[55px]
+                          w-[320px]
+                          rounded-[25px]" type="text" placeholder="toallin@gmail.com" required>
+            <label class="flex 
+                          gap-1 
+                        text-[#58B953]
+                          text-[16px]
+                          font-[500]
+                          items-center">
+              <img src="images/Key.png" alt="Password">
+              Password:
+            </label>
+            <input class="border-[2px]
+                        border-[#58B953]
+                        text-[#888]
+                          w-[320px]
+                          outline-none
+                          indent-4
+                          h-[55px]
+                          rounded-[25px]" type="password" placeholder="***********" required>
+            <label class="flex 
+                          gap-1 
+                        text-[#58B953]
+                          text-[16px]
+                          font-[500]
+                          items-center">
+              <img src="images/Phone.png" alt="Email">
+              Mobile Number:
+            </label>
+            <input class="border-[2px]
+                        border-[#58B953]
+                        text-[#888]
+                          w-[320px]
+                          outline-none
+                          indent-4
+                          h-[55px]
+                          rounded-[25px]" type="text" placeholder="###-###-####" required>
+            <button class="w-[320px]
+                           mt-[10px]
+                           cursor-pointer
+                           transition-all
+                           hover:scale-[1.05]
+                         text-white
+                           rounded-[25px]
+                           text-[16px]
+                           font-[500]
+                           h-[55px]
+                         bg-[#58B953]">
+              Sign Up
+            </button>
+          </form>
+
+        </section>
+    </main>
+    <script src="js/tailwind.js"></script>
+</body>
+</html>
