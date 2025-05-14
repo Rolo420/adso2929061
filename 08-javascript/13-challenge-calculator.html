@@ -166,15 +166,172 @@
                     }
                 }
             }
-
-            
-            
-        }
-        /*Dark Mode*/
+            /*Dark Mode*/
         &.dark {
                 background-color: #7d7d7d;
+                border-radius: 25px;
+                height: 800px;
+                margin: 0 auto;
+                width: 360px;
+                transition: all 0.5s ease-in;
+
+            header {
+                position: relative;
+                border: 2px;
+                align-items: center;
+                width: 360px;
+                height: 317px;
+
+                button.btn-mode {
+                    border: none;
+                    background: url(images/calc/theme2.svg) no-repeat center;
+                    cursor: pointer;
+                    justify-content: center;
+                    position: absolute;
+                    top: 8px;
+                    height: 50px;
+                    width: 50px;
+                    transition: transform 0.2s ease-in;
+
+                    &:hover {
+                        transform: scale(1.1)
+                    }
+                }
+
+                div.pantalla {
+                    width: 317px;
+                    height: 119px;
+                    background-color: #B0BDA3;
+                    position: absolute;
+                    top: 200px;
+                    border-radius: 25px;
+
+                    input.operation {
+                        background-color: transparent;
+                        border: none;
+                        color: #000000;
+                        height: 54px;
+                        font-size: 18px;
+                        outline: none;
+                        position: absolute;
+                        top: 50px;
+                        width: 317px;
+                        text-align: left;
+                        font-weight: 600;
+                        right: 0;
+                    }
+
+                    h4.result {
+
+                        color: #000000;
+                        position: absolute;
+                        top: 90px;
+                        width: auto;
+                        height: 63px;
+                    }
+                }
+            }
+
+            footer {
+                display: grid;
+                grid-template-columns: repeat(4, 73px);
+                gap: 5px;
+                width: 310px;
+                margin: 0.6rem auto 0 auto;
+
+                button {
+                    border: none;
+                    cursor: pointer;
+                    height: 80px;
+
+                    &:hover {
+                        opacity: 1;
+                        transform: scale(1.1);
+                    }
+
+                    &.btn-1 {
+                        background: transparent url(images/calc_dark/1.svg) no-repeat center;
+                    }
+
+                    &.btn-2 {
+                        background: transparent url(images/calc_dark/2.svg) no-repeat center;
+                    }
+
+                    &.btn-3 {
+                        background: transparent url(images/calc_dark/3.svg) no-repeat center;
+                    }
+
+                    &.btn-4 {
+                        background: transparent url(images/calc_dark/4.svg) no-repeat center;
+                    }
+
+                    &.btn-5 {
+                        background: transparent url(images/calc_dark/5.svg) no-repeat center;
+                    }
+
+                    &.btn-6 {
+                        background: transparent url(images/calc_dark/6.svg) no-repeat center;
+                    }
+
+                    &.btn-7 {
+                        background: transparent url(images/calc_dark/7.svg) no-repeat center;
+                    }
+
+                    &.btn-8 {
+                        background: transparent url(images/calc_dark/8.svg) no-repeat center;
+                    }
+
+                    &.btn-9 {
+                        background: transparent url(images/calc_dark/9.svg) no-repeat center;
+                    }
+
+                    &.btn-0 {
+                        background: transparent url(images/calc_dark/0.svg) no-repeat center;
+                    }
+
+                    &.btn-del {
+                        background: transparent url(images/calc_dark/borrar.svg) no-repeat center;
+                    }
+
+                    &.btn-clear {
+                        background: transparent url(images/calc_dark/ac.svg) no-repeat center;
+                    }
+
+                    &.btn-mod {
+                        background: transparent url(images/calc_dark/mod.svg) no-repeat center;
+                    }
+
+                    &.btn-mult {
+                        background: transparent url(images/calc_dark/x.svg) no-repeat center;
+                    }
+
+                    &.btn-subs {
+                        background: transparent url(images/calc_dark/-.svg) no-repeat center;
+                    }
+
+                    &.btn-plus {
+                        background: transparent url(images/calc_dark/+.svg) no-repeat center;
+                    }
+
+                    &.btn-div {
+                        background: transparent url(images/calc_dark/div.svg) no-repeat center;
+                    }
+
+                    &.btn-dot {
+                        background: transparent url(images/calc_dark/point.svg) no-repeat center;
+                    }
+
+                    &.btn-equal {
+                        background: transparent url(images/calc_dark/=.svg) no-repeat center;
+                    }
+                }
+            }
                 
         }
+            
+            
+        }
+        
     </style>
 </head>
 
@@ -230,6 +387,7 @@
     <script>
         //Elements
         const operation = document.querySelector('.operation')
+        const calculator = document.querySelector('.calculator')
         const result = document.querySelector('.result')
         const btnNumbers = document.querySelectorAll('button[data-num]')
         const btnOpers = document.querySelectorAll('button[data-opr]')
@@ -248,6 +406,22 @@
                 calculator.classList.remove('dark')
             }
         };
+
+        // Keyboard events
+    document.addEventListener('keydown', (e) => {
+        if (e.key >= 0 && e.key <= 9) {
+            operation.value += e.key
+        } else if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/' || e.key === '%') {
+            operation.value += e.key
+        } else if (e.key === 'Backspace') {
+            operation.value = operation.value.slice(0, -1)
+        } else if (e.key === 'Enter') {
+            result.textContent = eval(operation.value)
+        } else if (e.key === 'Escape') {
+            operation.value = ''
+            result.innerHTML = ''
+        }
+    });
 
         //Events
         btnMode.addEventListener('click', (e) => {
