@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 - Challenge Calculator</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        div.calculator {
+            background-color: #7d7d7d;
+            border-radius: 25px;
+            height: 800px;
+            margin: 0 auto;
+            width: 360px;
+            transition: all 0.5s ease-in;
+
+            header {
+                position: relative;
+                border: 2px;
+                align-items: center;
+                width: 360px;
+                height: 317px;
+
+                button.btn-mode {
+                    border: none;
+                    background: url(images/calc/theme.svg) no-repeat center;
+                    cursor: pointer;
+                    justify-content: center;
+                    position: absolute;
+                    top: 8px;
+                    height: 50px;
+                    width: 50px;
+                    transition: transform 0.2s ease-in;
+
+                    &:hover {
+                        transform: scale(1.1)
+                    }
+                }
+
+                div.pantalla {
+                    width: 317px;
+                    height: 119px;
+                    background-color: #B0BDA3;
+                    position: absolute;
+                    top: 200px;
+                    border-radius: 25px;
+
+                    input.operation {
+                        background-color: transparent;
+                        border: none;
+                        color: #000000;
+                        height: 54px;
+                        font-size: 18px;
+                        outline: none;
+                        position: absolute;
+                        top: 50px;
+                        width: 317px;
+                        text-align: left;
+                        font-weight: 600;
+                        right: 0;
+                    }
+
+                    h4.result {
+
+                        color: #000000;
+                        position: absolute;
+                        top: 90px;
+                        width: auto;
+                        height: 63px;
+                    }
+                }
+            }
+
+            footer {
+                display: grid;
+                grid-template-columns: repeat(4, 73px);
+                gap: 5px;
+                width: 310px;
+                margin: 0.6rem auto 0 auto;
+
+                button {
+                    border: none;
+                    cursor: pointer;
+                    height: 80px;
+
+                    &:hover {
+                        opacity: 1;
+                        transform: scale(1.1);
+                    }
+
+                    &.btn-1 {
+                        background: transparent url(images/calc/1.svg) no-repeat center;
+                    }
+
+                    &.btn-2 {
+                        background: transparent url(images/calc/2.svg) no-repeat center;
+                    }
+
+                    &.btn-3 {
+                        background: transparent url(images/calc/3.svg) no-repeat center;
+                    }
+
+                    &.btn-4 {
+                        background: transparent url(images/calc/4.svg) no-repeat center;
+                    }
+
+                    &.btn-5 {
+                        background: transparent url(images/calc/5.svg) no-repeat center;
+                    }
+
+                    &.btn-6 {
+                        background: transparent url(images/calc/6.svg) no-repeat center;
+                    }
+
+                    &.btn-7 {
+                        background: transparent url(images/calc/7.svg) no-repeat center;
+                    }
+
+                    &.btn-8 {
+                        background: transparent url(images/calc/8.svg) no-repeat center;
+                    }
+
+                    &.btn-9 {
+                        background: transparent url(images/calc/9.svg) no-repeat center;
+                    }
+
+                    &.btn-0 {
+                        background: transparent url(images/calc/0.svg) no-repeat center;
+                    }
+
+                    &.btn-del {
+                        background: transparent url(images/calc/borrar.svg) no-repeat center;
+                    }
+
+                    &.btn-clear {
+                        background: transparent url(images/calc/ac.svg) no-repeat center;
+                    }
+
+                    &.btn-mod {
+                        background: transparent url(images/calc/mod.svg) no-repeat center;
+                    }
+
+                    &.btn-mult {
+                        background: transparent url(images/calc/x.svg) no-repeat center;
+                    }
+
+                    &.btn-subs {
+                        background: transparent url(images/calc/-.svg) no-repeat center;
+                    }
+
+                    &.btn-plus {
+                        background: transparent url(images/calc/+.svg) no-repeat center;
+                    }
+
+                    &.btn-div {
+                        background: transparent url(images/calc/div.svg) no-repeat center;
+                    }
+
+                    &.btn-dot {
+                        background: transparent url(images/calc/point.svg) no-repeat center;
+                    }
+
+                    &.btn-equal {
+                        background: transparent url(images/calc/=.svg) no-repeat center;
+                    }
+                }
+            }
+
+            
+            
+        }
+        /*Dark Mode*/
+        &.dark {
+                background-color: #7d7d7d;
+                
+        }
+    </style>
+</head>
+
+<body class="js">
+    <nav>
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill="#ffffff"
+                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>13 - Challenge Calculator</h1>
+            <h2>Description</h2>
+        </header>
+        <section>
+            <div class="calculator">
+                <header>
+                    <button class="btn-mode"></button>
+                    <div class="pantalla">
+                        <input type="text" class="operation" readonly>
+                        <h4 class="result"></h4>
+                    </div>
+                </header>
+                <footer>
+                    <button class="btn-clear"></button>
+                    <button class="btn-del"></button>
+                    <button class="btn-div" data-opr="/"></button>
+                    <button class="btn-mod" data-opr="%"></button>
+                    <button class="btn-1" data-num="1"></button>
+                    <button class="btn-2" data-num="2"></button>
+                    <button class="btn-3" data-num="3"></button>
+                    <button class="btn-mult" data-opr="*"></button>
+                    <button class="btn-4" data-num="4"></button>
+                    <button class="btn-5" data-num="5"></button>
+                    <button class="btn-6" data-num="6"></button>
+                    <button class="btn-subs" data-opr="-"></button>
+                    <button class="btn-7" data-num="7"></button>
+                    <button class="btn-8" data-num="8"></button>
+                    <button class="btn-9" data-num="9"></button>
+                    <button class="btn-plus" data-opr="+"></button>
+                    <button class="btn-pow" data-opr="**"></button>
+                    <button class="btn-0" data-num="0"></button>
+                    <button class="btn-dot" data-opr="."></button>
+                    <button class="btn-equal"></button>
+                </footer>
+            </div>
+        </section>
+    </main>
+    <script>
+        //Elements
+        const operation = document.querySelector('.operation')
+        const result = document.querySelector('.result')
+        const btnNumbers = document.querySelectorAll('button[data-num]')
+        const btnOpers = document.querySelectorAll('button[data-opr]')
+        const btnClear = document.querySelector('.btn-clear')
+        const btnDel = document.querySelector('.btn-del')
+        const btnEqual = document.querySelector('.btn-equal')
+        const btnMode = document.querySelector('.btn-mode')
+
+        //Dark mode
+        const darkMode = window.matchMedia('(prefers-colo-scheme: dark)')
+        darkMode.addListener(darkModeChange)
+        function darkModeChange(dm) {
+            if (dm.matches) {
+                calculator.classList.add('dark')
+            } else {
+                calculator.classList.remove('dark')
+            }
+        };
+
+        //Events
+        btnMode.addEventListener('click', (e) => {
+            calculator.classList.toggle('dark')
+        });
+        btnClear.addEventListener('click', (e) => {
+            result.textContent = ''
+            operation.value = ''
+        });
+        btnDel.addEventListener('click', (e) => {
+            operation.value = operation.value.slice(0, -1)
+        });
+        btnEqual.addEventListener('click', (e) => {
+            result.textContent = `=${eval(operation.value)}`
+        });
+        btnNumbers.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                operation.value += btn.dataset.num
+            })
+        });
+        btnOpers.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                operation.value += btn.dataset.opr
+            })
+        });
+    </script>
+</body>
+
+</html>
