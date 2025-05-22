@@ -42,7 +42,7 @@
             background-color: #60BCEA; 
             border-radius: 10px;
 
-            div{
+            div.day{
                 position: absolute;
                 width: 50px;
                 height: 50px;
@@ -51,6 +51,7 @@
                 top: 5px;
                 right: 10px;
                 img.icoDia {
+                    background: url(images/conditionals/Sun.svg);
                     position: absolute;
                     width: 50px;
                     height: 50px;
@@ -143,6 +144,21 @@
                 width: 360px;
                 height: 380px;
                 background-color: #053286;
+                div.day{
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: #fff;
+                border-radius: 100%;
+                top: 5px;
+                right: 10px;
+                img.icoDia {
+                    background: url(images/conditionals/Moon.svg);
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+            }
+            }
                 h4.pais {
                     color: #9F9F9F;
                 }
@@ -206,7 +222,7 @@
                     </button>
                 </div>
                 <div class="widget">
-                    <div>
+                    <div class="day">
                         <img class="icoDia">
                     </div>
                     <h4 class="pais"></h4>
