@@ -254,7 +254,7 @@
         const humedad = document.querySelector('.humedad')
         const nube = document.querySelector('.nube')
         const icoCon = document.querySelector('.icoCon')
-        const icoDia = document.querySelector('.icoDia')
+        
         const tempText = document.querySelector('.tempText')
 
         //Events
@@ -306,7 +306,7 @@
             humedad.textContent = `Humidity: ${info.humidity}`
             nube.textContent = `Cloud: ${info.cloud}`
             icoCon.src = info.conditionIcon
-            icoDia.src = data.current.is_day
+            
             tempText.textContent = info.tempc
         }
         showWeather('Manizales')
