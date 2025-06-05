@@ -6,6 +6,41 @@
     <title>18 - Pokedex</title>
     <link rel="stylesheet" href="../css/styles.css">
     <style>
+        section.welcome{
+            background-color: #662E2E;
+            border-radius: 15px;
+            width: 380px;
+            height: 700px; 
+            align-items: center;
+            justify-content: center;
+            h1 {
+                color: #cccc;
+                text-align: center;
+                justify-content: center;
+            } 
+            img {
+                height: 308px;
+                width: 308px;
+                justify-content: center;
+            }
+            button{
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+        section.cards{
+            background-color: #662E2E;
+            border-radius: 15px;
+            width: 380px;
+            height: 720px;
+        }
+        section.info{
+            background-color: #662E2E;
+            border-radius: 15px;
+            width: 380px;
+            height: 720px;
+        }
         select.pk-generation {
             appearance: none;
             padding: 0.4rem 0.8rem;
@@ -19,6 +54,9 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 0.4rem;
+            height: 560px;
+            overflow-y: auto;
+            overflow-x: auto;
             li {
                 border: 2px solid #fff9;
                 border-radius: 0.4rem;
@@ -52,13 +90,35 @@
             <h1>18 - Pokedex</h1>
             <h2>Fetch and display data from the Pokedex API.</h2>
         </header>
-        <section>
-            <select class="pk-generation">
-            </select>
-            <img class="loader" src="/08-javascript/images/loader-pika.gif">
-            <ul class="pokemons"></ul>
+        <section id="welcome" class="welcome content">
+            <div class="welcome container align-items">
+                <div class="row">
+                    <div class="col-12 ">
+                        <h1 class="my-4">TITLE</h1>
+                    </div>
+                    <div class="col-12">
+                        <img src="/08-javascript/images/pokebola.svg">
+                    </div>
+                    <div class="col-12">
+                        <button href="#cards">BUTTON</button>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+        <section id="cards" class="cards">
+            <div class="cards">
+                <select class="pk-generation"></select>
+                <img class="loader" src="/08-javascript/images/loader-pika.gif">
+                <ul class="pokemons"></ul>
+            </div>
+        </section>
+        <section id="info" class="info">
+
         </section>
     </main>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <script>
 
         //Objects
