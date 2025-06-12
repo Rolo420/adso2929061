@@ -13,20 +13,40 @@
             height: 700px; 
             align-items: center;
             justify-content: center;
+            position: relative;
+            div.titulo{
+                width: 340px;
+                height: 124px;
+            }
             h1 {
                 color: #cccc;
                 text-align: center;
                 justify-content: center;
+                font-size: 35px;
+                
             } 
-            img {
+            img.pokebola {
                 height: 308px;
                 width: 308px;
                 justify-content: center;
+                position: absolute;
+                top: 216px;
+                transform: translate(7%);
             }
-            button{
+            a{
                 align-items: center;
+                border-radius: 10px;
+                border: none;
                 text-align: center;
-                justify-content: center;
+                background-color: #cabf45;
+                color: #676767;
+                position: absolute;
+                width: 340px;
+                height: 70px;
+                top: 594px;
+                font-size: 34px;
+                left: 20px;
+                
             }
         }
         section.cards{
@@ -34,12 +54,14 @@
             border-radius: 15px;
             width: 380px;
             height: 720px;
+            position: relative;
         }
         section.info{
             background-color: #662E2E;
             border-radius: 15px;
             width: 380px;
             height: 720px;
+            position: relative;
         }
         select.pk-generation {
             appearance: none;
@@ -60,9 +82,30 @@
             li {
                 border: 2px solid #fff9;
                 border-radius: 0.4rem;
-                h4, h5 {
+                position: relative;
+                h4 {
                     margin: 0;
                     text-align: center;
+                    position: absolute;
+                    top: 75px;
+                    font-size: 36px;
+                    left: 35px;
+                }
+                h5 {
+                    margin: 0;
+                    text-align: start;
+                    position: absolute;
+                    width: 100%;
+                    font-size: 20px;
+                    left: 10px;
+                    top: 10px;
+                }
+                img.pkmn{
+                    width: 90px;
+                    height: 90px;
+                    position: absolute;
+                    left: 68px;
+                    top: 30px;
                 }
             }
             &.hide {
@@ -92,15 +135,15 @@
         </header>
         <section id="welcome" class="welcome content">
             <div class="welcome container align-items">
-                <div class="row">
-                    <div class="col-12 ">
-                        <h1 class="my-4">TITLE</h1>
+                <div>
+                    <div>
+                        <img class="titulo" src="/08-javascript/images/pokedex.png">
                     </div>
-                    <div class="col-12">
-                        <img src="/08-javascript/images/pokebola.svg">
+                    <div>
+                        <img class="pokebola" src="/08-javascript/images/pokebola.svg">
                     </div>
-                    <div class="col-12">
-                        <button href="#cards">BUTTON</button>
+                    <div>
+                        <a href="#cards">Enter</a>
                     </div>
                 
                 </div>
@@ -191,10 +234,14 @@
                 //console.log(data)
                 const typeColor = data.types[0].type.name
                 pokemons.innerHTML +=  `<li style="border-color: ${types[typeColor]}; 
-                                                   background: linear-gradient(black, ${types[typeColor]})"> 
-                                            <h4>${data.id}</h4>
-                                            <h5>${data.name}</h5>
-                                            <img src="${data.sprites.front_default}"
+                                                   background-color: #998b8b;
+                                                   width: 160px;
+                                                   height: 130px;
+                                                   text-color: #cccccc"> 
+                                                   <h5>${data.name}</h5>
+                                                   <h4>${data.id}</h4>
+                                                   <img class="type" src="">
+                                                   <img class="pkmn" src="${data.sprites.front_default}"
                                         </li>`
             }
         }
